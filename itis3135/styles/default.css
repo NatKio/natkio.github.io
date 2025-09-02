@@ -1,0 +1,22 @@
+body{ 
+    background-color: grey ;  
+    text-align: center;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+a{
+    color: indigo;
+    text-decoration: none;
+}
+a:hover {
+    color: lavender;
+    text-decoration: line;
+}
+
+main{
+    
+}
+
+h2{
+    text-align: center;
+}
