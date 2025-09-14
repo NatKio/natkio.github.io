@@ -5,7 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natalie Kioroglo's Nonchalant Kestrel || Introduction</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/default.css">
+    <style>
+    /* General Page Styling */
+    body {
+        background-color: #f8f7ff;
+        color: #231942;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+
+    /* Header */
+    h1 {
+        background-color: #E1DFF7;
+        color: #231942;
+        font-size: 2.5em;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 img {
+        width: 45px;
+        height: 45px;
+        vertical-align: middle;
+        margin-left: 10px;
+    }
+
+    h2 {
+        color: #5e548e;
+        font-size: 2em;
+        margin: 20px 0 10px;
+        text-align: center;
+    }
+
+    p {
+        max-width: 800px;
+        margin: 0 auto 20px;
+        font-size: 1.05em;
+        text-align: center;
+        color: #302b27;
+        padding: 0 15px;
+    }
+
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 45%;
+    }
+
+    figcaption {
+        text-align: center;
+        font-size: 0.9em;
+        color: #555;
+        margin-top: 5px;
+    }
+
+    /* Lists */
+    .custom-bullets {
+        list-style: none;
+        padding: 0;
+        max-width: 800px;
+        margin: 0 auto 30px;
+    }
+
+    .custom-bullets li {
+        background: #ebe7f1;
+        margin: 8px 0;
+        padding: 10px 15px;
+        border-radius: 6px;
+        font-size: 1em;
+        color: #231942;
+        list-style: none;
+    }
+
+    .custom-bullets li::before {
+        content: "›";
+        color: #9f86c0;
+        font-weight: bold;
+        margin-right: 8px;
+    }
+
+    a {
+        color: #E1DFF7;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1em;
+        padding: 6px 10px;
+        border-radius: 6px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    a:hover{
+        background-color: #5e548e;
+        color: #f8f7ff
+
+    }
+        /* Navigation Bar */
+    nav {
+        background-color: #231942; /* dark purple background */
+        padding: 12px 20px;
+        text-align: center;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;           /* horizontal layout */
+        justify-content: center; /* center the links */
+        gap: 25px;               /* spacing between items */
+    }
+
+    nav ul li {
+        display: inline;
+    }
+
+    p a {
+        color: #5e548e;
+        max-width: 800px;
+        margin: 0 auto 20px;
+        font-size: 1.05em;
+        text-align: center;
+        padding: 10px;
+    }
+
+  </style>
 </head>
 <body>
     <header>
@@ -27,7 +154,7 @@
                 <img src="images/yellowstoneselfie.jpg" alt="Picture of Natalie Kioroglo">
                 <figcaption><i>My husband and I in Yellowstone National Park.</i></figcaption>
             </figure>
-            <ul>
+            <ul class="custom-bullets">
                 <li><b>Personal Background: </b>I was originally born in California. My family moved to Charlotte when I was 3, and I have lived here ever since.</li>
                 <li><b>Professional Background: </b>I studied and worked as a Dental Assistant for 3 years before deciding to pursue Computer Science at UNCC.</li>
                 <li><b>Academic Background: </b>My major is Computer Science, with a concentration in Software Engineering. I plan on graduating Fall 2026.</li>
@@ -49,7 +176,6 @@
             
     </main>
     <footer>
-            <hr>
             <nav>
                 <a href="https://webpages.charlotte.edu/nkiorogl/">Charlotte Web Page</a>
                 ||
