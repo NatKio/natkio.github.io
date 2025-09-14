@@ -1,43 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- https://coolors.co/1b264f-274690-576ca8-302b27-f5f3f5 -->
+<!-- https://coolors.co/231942-5e548e-9f86c0-be95c4-f8f7ff -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NatKio Designs</title>
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="itis3135/styles/default.css">
-    <style>
-        body {
-            background-color: #F5F3F5;
-            color: #302b27;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            margin: 0;
-            padding: 20px;
-        }
-        h1{
-            color: #302B27;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        h2 {
-            color: #1B264F;
-            font-size: 2em;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        p {
-            font-size: 1.2em;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NatKio Designs</title>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="itis3135/styles/default.css">
+  <style>
+    /* General Page Styling */
+    body {
+      background-color: #f8f7ff;
+      color: #231942;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    h1 {
+      background-color: #E1DFF7;
+      color: #231942;
+      font-size: 2.5em;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 img {
+      width: 45px;
+      height: 45px;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+
+    h2 {
+      color: #5e548e;
+      font-size: 2em;
+      margin: 20px 0 10px;
+      text-align: center;
+    }
+
+    p {
+      max-width: 800px;
+      margin: 0 auto 20px;
+      font-size: 1.05em;
+      text-align: center;
+      color: #302b27;
+      padding: 0 15px;
+    }
+
+    /* Lists */
+    .custom-bullets {
+      list-style: none;
+      padding: 0;
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+
+    .custom-bullets li {
+      background: #ebe7f1;
+      margin: 8px 0;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-size: 1em;
+      color: #231942;
+    }
+
+    .custom-bullets li::before {
+      content: "›";
+      color: #9f86c0;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+
+    /* Contact Section */
+    .contact {
+      background-color: #E1DFF7;
+      color: #231942;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .contact li {
+      background: none;
+      margin: 5px 0;
+      padding: 0;
+    }
+
+    .contact li::before {
+      content: "✉";
+      color: #231942;
+      margin-right: 8px;
+    }
+
+    .contact li:nth-child(2)::before {
+      content: "☎";
+    }
+
+    .contact li:nth-child(3)::before {
+      content: "📍";
+    }
+  </style>
 </head>
 <body>
-    <h1>
-        NatKio Designs
-        <img src="images/nk_logo.png" alt="NatKio Designs Logo" style="width:40px; height:40px; vertical-align:middle;"></a>
-    </h1>
-    <p>This is the Design Page of Natalie Kioroglo</p>
+  <h1>
+    NatKio Designs
+    <img src="images/nk_logo.png" alt="NatKio Designs Logo">
+  </h1>
+
+  <h2>NatKio Design Services</h2>
+  <p>
+    NatKio Designs is a forward-thinking website design company dedicated to helping businesses and individuals create beautiful, functional, and user-friendly online experiences. We specialize in crafting custom websites that not only capture your brand’s unique identity but also engage your audience and drive results.
+    <br><br>
+    At NatKio Designs, we blend creativity with modern technology to deliver responsive, accessible, and visually striking websites tailored to your goals. Whether you need a sleek portfolio, a dynamic e-commerce platform, or a professional business site, our mission is to bring your vision to life with clean design, intuitive navigation, and lasting impact.
+    <br><br>
+    Your website is often the first impression of your brand—we make sure it’s unforgettable.
+  </p>
+
+  <ul class="custom-bullets">
+    <li>Custom-Tailored Designs – Every website is uniquely crafted to fit your brand and goals.</li>
+    <li>User-First Approach – Responsive, accessible, and intuitive on any device.</li>
+    <li>Creative + Technical Balance – Beauty meets functionality in every project.</li>
+    <li>Results-Driven – Designs that engage audiences and drive growth.</li>
+    <li>Collaborative Process – We partner closely with clients to bring their vision to life.</li>
+  </ul>
+
+  <p>
+    At NatKio Designs, we’d love the opportunity to transform your ideas into a stunning, professional online presence that speaks directly to your audience. Whether you’re just starting out or ready to take your digital identity to the next level, we’re here to make it happen. Reach out today—we can’t wait to design something amazing together.
+  </p>
+
+  <ul class="custom-bullets contact">
+    <li>Email: contact@natkiodesigns.com</li>
+    <li>Phone: (555) 234-9876</li>
+    <li>Address: 101 Innovation Way, Charlotte, NC 28202</li>
+  </ul>
 </body>
 </html>
