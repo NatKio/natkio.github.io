@@ -82,7 +82,7 @@
     }
 
     .custom-bullets li::before {
-        content: "›";
+        content: "⟢";
         color: #9f86c0;
         font-weight: bold;
         margin-right: 8px;
@@ -136,60 +136,39 @@
 </head>
 <body>
     <header>
-            <h1>
-                Natalie Kioroglo || ITIS 3135 
-            </h1>
-            <nav>
-            <a href="./">Home</a>
-            ||
-            <a href="introduction.html">Introduction</a>
-            ||
-            <a href="contract.html">Contract</a>
-            </nav>
+        <div data-include = "components/header.html"></div>
     </header>
     <main>
-            <h2><b>Introduction</b></h2>
-            <h2>Natalie Kioroglo</h2>
-            <figure>
-                <img src="images/yellowstoneselfie.jpg" alt="Picture of Natalie Kioroglo">
-                <figcaption><i>My husband and I in Yellowstone National Park.</i></figcaption>
-            </figure>
-            <ul class="custom-bullets">
-                <li><b>Personal Background: </b>I was originally born in California. My family moved to Charlotte when I was 3, and I have lived here ever since.</li>
-                <li><b>Professional Background: </b>I studied and worked as a Dental Assistant for 3 years before deciding to pursue Computer Science at UNCC.</li>
-                <li><b>Academic Background: </b>My major is Computer Science, with a concentration in Software Engineering. I plan on graduating Fall 2026.</li>
-                <li><b>Backgorund in this Subject: </b>I interned for a company in the summer of 2025, where I contributed to the development of their projects and also created a few of my own.</li>
-                <li><b>Primary Computer Platform: </b>Macbook Air, 2025, OS: 15.6.1.</li>
-                <li><b>Courses I'm Taking & Why: </b>
-                    <ul>
-                        <li><b>STAT 2122 - Intro to Prob and Stat: </b>A core math course for my degree.</li>
-                        <li><b>3688 - Comp and Their Impact on Society: </b>A class teaching the importance of understanding the need for ethics in technology and computing,
-                             as well as studying current topics.</li>
-                        <li><b>ITSC 3146 - Intro to Oper Syst and Networking: </b>A class teaching the fundamentals of operating systems together with the basics of networking and communications. </li>
-                        <li><b>ITSC 3155 - Software Engineering: </b>A class introducing software engineering, which advances the study and application of engineering principles, methods,
-                             and techniques that can help us to improve the process of creating software as well as the resulting software products. </li>
-                        <li><b>ITIS 3135 - Front-End Web App Development: </b>A class introducing and teaching front-end web application development. </li>
-                    </ul>
-                    </li>
-                <li><b>Interesting Item to Remember me by: </b>I have three black cats!</li>
-            </ul>
+        <h2><b>Introduction</b></h2>
+        <h2>Natalie Kioroglo</h2>
+        <figure>
+            <img src="images/yellowstoneselfie.jpg" alt="Picture of Natalie Kioroglo">
+            <figcaption><i>My husband and I in Yellowstone National Park.</i></figcaption>
+        </figure>
+        <ul class="custom-bullets">
+            <li><b>Personal Background: </b>I was originally born in California. My family moved to Charlotte when I was 3, and I have lived here ever since.</li>
+            <li><b>Professional Background: </b>I studied and worked as a Dental Assistant for 3 years before deciding to pursue Computer Science at UNCC.</li>
+            <li><b>Academic Background: </b>My major is Computer Science, with a concentration in Software Engineering. I plan on graduating Fall 2026.</li>
+            <li><b>Backgorund in this Subject: </b>I interned for a company in the summer of 2025, where I contributed to the development of their projects and also created a few of my own.</li>
+            <li><b>Primary Computer Platform: </b>Macbook Air, 2025, OS: 15.6.1.</li>
+            <li><b>Courses I'm Taking & Why: </b>
+                <ul>
+                    <li><b>STAT 2122 - Intro to Prob and Stat: </b>A core math course for my degree.</li>
+                    <li><b>3688 - Comp and Their Impact on Society: </b>A class teaching the importance of understanding the need for ethics in technology and computing,
+                            as well as studying current topics.</li>
+                    <li><b>ITSC 3146 - Intro to Oper Syst and Networking: </b>A class teaching the fundamentals of operating systems together with the basics of networking and communications. </li>
+                    <li><b>ITSC 3155 - Software Engineering: </b>A class introducing software engineering, which advances the study and application of engineering principles, methods,
+                            and techniques that can help us to improve the process of creating software as well as the resulting software products. </li>
+                    <li><b>ITIS 3135 - Front-End Web App Development: </b>A class introducing and teaching front-end web application development. </li>
+                </ul>
+                </li>
+            <li><b>Interesting Item to Remember me by: </b>I have three black cats!</li>
+        </ul>
             
     </main>
     <footer>
-            <nav>
-                <a href="https://webpages.charlotte.edu/nkiorogl/">Charlotte Web Page</a>
-                ||
-                <a href="https://github.com/NatKio">GitHub</a>
-                ||
-                <a href="https://natkio.github.io/itis3135/">GitHub.io</a>
-                ||
-                <a href="https://www.freecodecamp.org/natkio">freeCodeCamp</a>
-                ||
-                <a href="https://www.codecademy.com/profiles/NatKio">Codecademy</a>
-                ||
-                <a href="https://www.linkedin.com/in/natalie-kioroglo-2b0790180/">LinkedIn</a>
-            </nav>
-            <p>Page Designed by <a href = "../natkiodesigns.com/index.html">NatKio Designs</a> &copy; 2025 </p>
+        <div data-include = "components/footer.html"></div>
     </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
