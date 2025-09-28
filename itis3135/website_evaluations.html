@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natalie Kioroglo's Nimble Klipspringer || Home</title>
+    <title>Natalie Kioroglo's Nimble Klipspringer || Website Evaluations</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
     /* General Page Styling */
@@ -38,6 +38,23 @@
         font-size: 2em;
         margin: 20px 0 10px;
         text-align: center;
+    }
+
+    h3 a {
+        color: #3b2e5a;  
+        font-size: 1.2em;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    /* Website description paragraphs (smaller & neater) */
+    main > p {
+        text-align: left;
+        font-size: 0.95em;   
+        line-height: 1.5;    
+        max-width: 700px;   
+        margin: 0 auto 15px;
+        color: #2c2c2c;
     }
 
     p {
@@ -79,6 +96,7 @@
         font-size: 1em;
         color: #231942;
         list-style: none;
+        font-size: 0.95em
     }
 
     .custom-bullets li::before {
@@ -105,7 +123,7 @@
     }
         /* Navigation Bar */
     nav {
-        background-color: #231942; /* dark purple background */
+        background-color: #231942; 
         padding: 12px 20px;
         text-align: center;
     }
@@ -114,9 +132,9 @@
         list-style: none;
         margin: 0;
         padding: 0;
-        display: flex;           /* horizontal layout */
-        justify-content: center; /* center the links */
-        gap: 25px;               /* spacing between items */
+        display: flex;           
+        justify-content: center; 
+        gap: 25px;         
     }
 
     nav ul li {
@@ -139,8 +157,26 @@
         <div data-include = "components/header.html"></div>
     </header>
     <main>
-        <h2>Home</h2>
-        <p>Hello, this is my ITIS 3135 Course Home Page</p>
+        <h2>Website Evaluations</h2>
+        <h3><a href src="https://www.airbnb.com/">Airbnb</a> </h3>
+        <p>Airbnb’s homepage is known for its clean design, intuitive search bar, and strong use of visual hierarchy. 
+            The site emphasizes usability with clear calls-to-action and a cohesive aesthetic that aligns well with modern UI principles.</p>
+        <ul class="custom-bullets">
+            <li>Contrast: The main search bar stands out clearly against the white background with bold text and icons.</li>
+            <li>Repetition: Fonts, button styles, and card layouts are consistent throughout the site, creating a uniform look.</li>
+            <li>Alignment: Content is arranged in a clean grid, with clear alignment of images, text, and buttons.</li>
+            <li>Proximity: Related information (like property photo, price, and rating) is grouped together, making browsing intuitive.</li>
+        </ul>
+
+         <h3><a href src="https://www.lingscars.com/">LingsCars</a> </h3>
+        <p>LingsCars is infamous for its chaotic, over-the-top design. While it may attract attention, 
+            the site often overwhelms users with flashing graphics, clashing colors, and scattered elements that violate CRAP principles.</p>
+        <ul class="custom-bullets">
+            <li>Contrast: The color palette is excessive and chaotic, reducing readability instead of highlighting important features.</li>
+            <li>Repetition: Fonts, styles, and visual elements change constantly, creating a disjointed experience.</li>
+            <li>Alignment: Elements appear misaligned or randomly placed, making the layout feel unstructured.</li>
+            <li>Proximity: Content is cluttered together with little logical grouping, forcing users to scan chaotically to find what they need.</li>
+        </ul>
     </main>
     <footer>
         <div data-include = "components/footer.html"></div>
