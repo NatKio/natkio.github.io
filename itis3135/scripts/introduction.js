@@ -4,12 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const addCourseButton = document.getElementById("addCourse");
   const coursesDiv = document.getElementById("courses");
   const output = document.getElementById("output");
+  const picturePreview = document.getElementById("picturePreview");
+  const pictureUpload = document.getElementById("pictureUpload");
+  const defaultPreviewSrc = "images/yellowstoneselfie.jpg";
 
-  // Prevent default form submission
+  // Submit button
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // Validate required fields
     const requiredFields = form.querySelectorAll("[required]");
     for (const field of requiredFields) {
       if (!field.value.trim()) {
@@ -18,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Gather form data
     const data = new FormData(form);
     let html = `<h2>${data.get("firstName")} ${data.get("lastName")}</h2>`;
     html += `<p><strong>${data.get("acknowledgeStatement")}</strong></p>`;
@@ -41,16 +42,17 @@ document.addEventListener("DOMContentLoaded", () => {
     form.style.display = "none";
     output.innerHTML = html;
 
-    // Reset link functionality
     document.getElementById("resetLink").addEventListener("click", (e) => {
       e.preventDefault();
       output.innerHTML = "";
       form.style.display = "block";
       form.reset();
+      picturePreview.src = defaultPreviewSrc;
+      removeExtraCourses();
     });
   });
 
-  // Add new course fields
+  // Add course
   addCourseButton.addEventListener("click", () => {
     const courseGroup = document.createElement("div");
     courseGroup.classList.add("course-group");
@@ -68,18 +70,44 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Clear button functionality
+  // Clear button
   clearButton.addEventListener("click", () => {
-    Array.from(form.querySelectorAll("input, textarea")).forEach((input) => {
-      if (input.type !== "file") input.value = "";
+    // Clear all input and textarea values
+    form.querySelectorAll("input, textarea").forEach((input) => {
+      if (input.type === "file") {
+        input.value = null;
+      } else {
+        input.value = "";
+      }
     });
+
+    // Reset preview image
+    picturePreview.src = defaultPreviewSrc;
+
+    // Remove dynamically added course groups (keep the first one)
+    removeExtraCourses();
+  });
+
+  // Reset button
+  form.addEventListener("reset", () => {
+    picturePreview.src = defaultPreviewSrc;
+    removeExtraCourses();
   });
 
   // Picture preview
-  document.getElementById("pictureUpload").addEventListener("change", (e) => {
+  pictureUpload.addEventListener("change", (e) => {
     const file = e.target.files[0];
     if (file) {
-      document.getElementById("picturePreview").src = URL.createObjectURL(file);
+      picturePreview.src = URL.createObjectURL(file);
     }
   });
+
+  function removeExtraCourses() {
+    const courseGroups = coursesDiv.querySelectorAll(".course-group");
+    courseGroups.forEach((group, index) => {
+      if (index > 0) coursesDiv.removeChild(group);
+    });
+  }
+
+  console.log("introduction.js loaded successfully");
 });
