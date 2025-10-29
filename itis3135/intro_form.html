@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natalie Kioroglo's Nimble Klipspringer || Introduction Form</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+    /* General Page Styling */
+    body {
+        background-color: #f8f7ff;
+        color: #231942;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+
+    /* Header */
+    h1 {
+        background-color: #E1DFF7;
+        color: #231942;
+        font-size: 2.5em;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 img {
+        width: 45px;
+        height: 45px;
+        vertical-align: middle;
+        margin-left: 10px;
+    }
+
+    h2 {
+        color: #5e548e;
+        font-size: 2em;
+        margin: 20px 0 10px;
+        text-align: center;
+    }
+
+    main {
+        max-width: 1200px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    p {
+        max-width: 800px;
+        margin: 0 auto 20px;
+        font-size: 1.05em;
+        text-align: center;
+        color: #302b27;
+        padding: 0 15px;
+    }
+
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 45%;
+    }
+
+    figcaption {
+        text-align: center;
+        font-size: 0.9em;
+        color: #555;
+        margin-top: 5px;
+    }
+
+    /* Lists */
+    .custom-bullets {
+        list-style: none;
+        padding: 0;
+        max-width: 800px;
+        margin: 0 auto 30px;
+    }
+
+    .custom-bullets li {
+        background: #ebe7f1;
+        margin: 8px 0;
+        padding: 10px 15px;
+        border-radius: 6px;
+        font-size: 1em;
+        color: #231942;
+        list-style: none;
+    }
+
+    .custom-bullets li::before {
+        content: "⟢";
+        color: #9f86c0;
+        font-weight: bold;
+        margin-right: 8px;
+    }
+
+    a {
+        color: #E1DFF7;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1em;
+        padding: 6px 10px;
+        border-radius: 6px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    a:hover{
+        background-color: #5e548e;
+        color: #f8f7ff
+
+    }
+        /* Navigation Bar */
+    nav {
+        background-color: #231942; /* dark purple background */
+        padding: 12px 20px;
+        text-align: center;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;           /* horizontal layout */
+        justify-content: center; /* center the links */
+        gap: 25px;               /* spacing between items */
+    }
+
+    nav ul li {
+        display: inline;
+    }
+
+    p a {
+        color: #5e548e;
+        max-width: 800px;
+        margin: 0 auto 20px;
+        font-size: 1.05em;
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Form Styling */
+
+    form {
+        background: #ebe7f1;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    label {
+        display: block;
+        margin-top: 12px;
+        font-weight: bold;
+        color: #231942;
+    }
+
+    input, textarea, select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 4px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        margin: 10px 5px;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 6px;
+        background-color: #5e548e;
+        color: white;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #9f86c0;
+    }
+
+    .course-group {
+        margin-top: 10px;
+        background: #f4f0fa;
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+    img.preview {
+        display: block;
+        margin: 10px auto;
+        width: 200px;
+        border-radius: 8px;
+    }
+
+  </style>
+</head>
+<body>
+    <header>
+        <div data-include = "components/header.html"></div>
+    </header>
+    <main>
+        <h2>Introduction Form</h2>
+        <h3>Please submit the form below:</h3>
+        <form id="form">
+            <label>First Name:</label>
+            <input type="text" name="firstName" value="Natalie" placeholder="Enter your first name" required>
+
+            <label>Middle Name (or Initial):</label>
+            <input type="text" name="middleName" value="Jasmine" placeholder="Enter your middle name or initial">
+
+            <label>Nickname / Preferred Name:</label>
+            <input type="text" name="nickname" value="Natalie" placeholder="Enter your preferred name">
+
+            <label>Last Name:</label>
+            <input type="text" name="lastName" value="Kioroglo" placeholder="Enter your last name" required>
+
+            <label>Acknowledgment Statement:</label>
+            <input type="text" name="acknowledgeStatement" value="I have read and understood the syllabus." placeholder="Type your acknowledgment statement" required>
+
+            <label>Acknowledgment Date:</label>
+            <input type="date" name="acknowledgeDate" value="2025-10-27" required>
+
+            <label>Mascot Adjective:</label>
+            <input type="text" name="mascotAdj" value="Nimble" placeholder="e.g., Brave, Clever, Fierce" required>
+
+            <label>Mascot Animal:</label>
+            <input type="text" name="mascotAnimal" value="Klipspringer" placeholder="e.g., Tiger, Fox, Dragon" required>
+
+            <label>Divider:</label>
+            <input type="text" name="divider" value="⟢" placeholder="e.g., ~, |, ♥️" required>
+
+            <label>Picture:</label>
+            <input type="file" id="pictureUpload" name="picture">
+            <img id="picturePreview" src="images/yellowstoneselfie.jpg" alt="Profile picture" class="preview">
+
+            <label>Picture Caption:</label>
+            <input type="text" name="pictureCaption" value="My husband and I in Yellowstone National Park." placeholder="Enter a caption">
+
+            <label>Personal Statement:</label>
+            <textarea name="personalStatement" placeholder="Write about yourself" required>
+            I'm a Computer Science major at UNC Charlotte with a focus in Software Engineering.
+            </textarea>
+
+            <h3>Main Bullets</h3>
+                <div id="bullets">
+                    <input type="text" name="bullet1" value="Personal Background: Former Dental Assistant" placeholder="Bullet 1">
+                    <input type="text" name="bullet2" value="Education: Junior at UNC Charlotte" placeholder="Bullet 2">
+                    <input type="text" name="bullet3" value="Focus: Software Engineering" placeholder="Bullet 3">
+                    <input type="text" name="bullet4" value="Career Goals: Software Developer" placeholder="Bullet 4">
+                    <input type="text" name="bullet5" value="Hobbies: Drawing, gaming, and coding" placeholder="Bullet 5">
+                    <input type="text" name="bullet6" value="Fun Fact: I have three black cats!" placeholder="Bullet 6">
+                    <input type="text" name="bullet7" value="Looking forward to learning advanced JS!" placeholder="Bullet 7">
+                </div>
+
+            <h3>Courses</h3>
+            <div id="courses">
+                <div class="course-group">
+                    <input type="text" name="courseDept" value="ITIS" placeholder="Department (e.g., ITIS)" required>
+                    <input type="text" name="courseNumber" value="3135" placeholder="Course Number" required>
+                    <input type="text" name="courseName" value="Front-End Web App Development" placeholder="Course Name" required>
+                    <input type="text" name="courseReason" value="I want to strengthen my web development skills." placeholder="Reason for taking course">
+                </div>
+            </div>
+            <button type="button" id="addCourse">Add Another Course</button>
+
+            <label>Quote:</label>
+            <input type="text" name="quote" value="“Nothing is so painful to the human mind as a great and sudden change.”" placeholder="Enter your favorite quote" required>
+
+            <label>Quote Author:</label>
+            <input type="text" name="quoteAuthor" value="Mary Wollstonecraft Shelley" placeholder="Quote author" required>
+
+            <label>Funny Thing (optional):</label>
+            <input type="text" name="funnyThing" value="" placeholder="Share something funny">
+
+            <label>Something I Would Like to Share (optional):</label>
+            <input type="text" name="somethingToShare" value="" placeholder="Share something interesting">
+
+            <h3>Links</h3>
+            <input type="url" name="Charlotte Web Page" value="https://webpages.charlotte.edu/nkiorogl/" placeholder="LinkedIn URL">
+            <input type="url" name="GitHub" value="https://github.com/NatKio" placeholder="GitHub URL">
+            <input type="url" name="freeCodeCamp" value="https://www.freecodecamp.org/natkio" placeholder="freeCodeCamp URL">
+            <input type="url" name="Codecademy" value="https://www.codecademy.com/profiles/NatKio" placeholder="Codecademy URL">
+            <input type="url" name="LinkedIn" value="https://www.linkedin.com/in/natalie-kioroglo-2b0790180/" placeholder="LinkedIn URL">
+
+            <br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <button type="button" id="clearButton">Clear</button>
+        </form>
+
+        <div id="output"></div>
+    </main>
+    <footer>
+        <div data-include = "components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/introduction.js"></script>
+</body>
+</html>
