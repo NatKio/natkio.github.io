@@ -8,6 +8,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const pictureUpload = document.getElementById("pictureUpload");
   const defaultPreviewSrc = "images/yellowstoneselfie.jpg";
 
+  // Safety check: ensure all required elements exist
+  if (!form || !clearButton || !addCourseButton || !coursesDiv || !output || !picturePreview || !pictureUpload) {
+    console.error("One or more required DOM elements are missing.");
+    return;
+  }
+
+  // Utility function to remove extra course groups
+  function removeExtraCourses() {
+    const courseGroups = coursesDiv.querySelectorAll(".course-group");
+    courseGroups.forEach((group, index) => {
+      if (index > 0) coursesDiv.removeChild(group);
+    });
+  }
+
   // Submit button
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -21,28 +35,45 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const data = new FormData(form);
-    let html = `<h2>${data.get("firstName")} ${data.get("lastName")}</h2>`;
-    html += `<p><strong>${data.get("acknowledgeStatement")}</strong></p>`;
-    html += `<p>${data.get("personalStatement")}</p>`;
+    const firstName = data.get("firstName") || "";
+    const lastName = data.get("lastName") || "";
+    const ack = data.get("acknowledgeStatement") || "";
+    const personal = data.get("personalStatement") || "";
+    const quote = data.get("quote") || "";
+    const quoteAuthor = data.get("quoteAuthor") || "";
+
+    let html = `<h2>${firstName} ${lastName}</h2>`;
+    html += `<p><strong>${ack}</strong></p>`;
+    html += `<p>${personal}</p>`;
     html += `<h3>Courses:</h3><ul>`;
 
-    const courseDepts = Array.from(form.querySelectorAll("[name='courseDept']")).map(i => i.value);
-    const courseNums = Array.from(form.querySelectorAll("[name='courseNumber']")).map(i => i.value);
-    const courseNames = Array.from(form.querySelectorAll("[name='courseName']")).map(i => i.value);
-    const courseReasons = Array.from(form.querySelectorAll("[name='courseReason']")).map(i => i.value);
+    const courseDepts = Array.from(form.querySelectorAll("[name='courseDept']")).map((i) => i.value.trim());
+    const courseNums = Array.from(form.querySelectorAll("[name='courseNumber']")).map((i) => i.value.trim());
+    const courseNames = Array.from(form.querySelectorAll("[name='courseName']")).map((i) => i.value.trim());
+    const courseReasons = Array.from(form.querySelectorAll("[name='courseReason']")).map((i) => i.value.trim());
 
     courseDepts.forEach((_, i) => {
-      html += `<li>${courseDepts[i]} ${courseNums[i]} - ${courseNames[i]} (${courseReasons[i]})</li>`;
+      if (courseDepts[i] && courseNums[i] && courseNames[i]) {
+        html += `<li>${courseDepts[i]} ${courseNums[i]} - ${courseNames[i]} (${courseReasons[i] || "No reason provided"})</li>`;
+      }
     });
     html += `</ul>`;
 
-    html += `<p><em>"${data.get("quote")}" — ${data.get("quoteAuthor")}</em></p>`;
-    html += `<a href="#" id="resetLink">Reset Form</a>`;
+    if (quote || quoteAuthor) {
+      html += `<p><em>"${quote}" — ${quoteAuthor}</em></p>`;
+    }
 
+    // Ensure only one reset link exists
+    const resetId = "resetLink";
+    if (document.getElementById(resetId)) {
+      document.getElementById(resetId).remove();
+    }
+
+    html += `<a href="#" id="${resetId}">Reset Form</a>`;
     form.style.display = "none";
     output.innerHTML = html;
 
-    document.getElementById("resetLink").addEventListener("click", (e) => {
+    document.getElementById(resetId).addEventListener("click", (e) => {
       e.preventDefault();
       output.innerHTML = "";
       form.style.display = "block";
@@ -72,19 +103,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Clear button
   clearButton.addEventListener("click", () => {
-    // Clear all input and textarea values
     form.querySelectorAll("input, textarea").forEach((input) => {
       if (input.type === "file") {
-        input.value = null;
+        const newInput = input.cloneNode(true);
+        input.parentNode.replaceChild(newInput, input);
       } else {
         input.value = "";
       }
     });
-
-    // Reset preview image
     picturePreview.src = defaultPreviewSrc;
-
-    // Remove dynamically added course groups (keep the first one)
     removeExtraCourses();
   });
 
@@ -101,13 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
       picturePreview.src = URL.createObjectURL(file);
     }
   });
-
-  function removeExtraCourses() {
-    const courseGroups = coursesDiv.querySelectorAll(".course-group");
-    courseGroups.forEach((group, index) => {
-      if (index > 0) coursesDiv.removeChild(group);
-    });
-  }
 
   console.log("introduction.js loaded successfully");
 });
